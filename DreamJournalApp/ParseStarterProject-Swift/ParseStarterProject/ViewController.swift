@@ -9,8 +9,9 @@
 
 import UIKit
 import Parse
+import ParseUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PFLogInViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +21,35 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let logInController = MyLogInViewController()
+        logInController.delegate = self
+        self.presentViewController(logInController, animated:true, completion: nil)
+    }
+    
+    func logInViewController(controller: PFLogInViewController, didLogInUser user: PFUser) -> Void {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func logInViewControllerDidCancelLogIn(controller: PFLogInViewController) -> Void {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+
+}
+
+class MyLogInViewController : PFLogInViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //self.view.backgroundColor = UIColor.darkGrayColor()
+        
+        let image = UIImage(named: "")
+        
+        let logoView = UIImageView(image: image)
+        self.logInView!.logo = logoView
     }
 }
