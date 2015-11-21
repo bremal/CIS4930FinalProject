@@ -11,7 +11,8 @@ import UIKit
 import Parse
 import ParseUI
 
-class ViewController: UIViewController, PFLogInViewControllerDelegate {
+
+class LoginViewController: UIViewController, PFLogInViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +25,14 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-        let logInController = MyLogInViewController()
-        logInController.delegate = self
-        self.presentViewController(logInController, animated:true, completion: nil)
+        if(PFUser.currentUser()!.username == nil) {
+            let logInController = MyLogInViewController()
+            logInController.delegate = self
+            self.presentViewController(logInController, animated:true, completion: nil)
+        }
+        else {
+            performSegueWithIdentifier("loginSuccess", sender: nil)
+        }
     }
     
     func logInViewController(controller: PFLogInViewController, didLogInUser user: PFUser) -> Void {
@@ -36,7 +42,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate {
     func logInViewControllerDidCancelLogIn(controller: PFLogInViewController) -> Void {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
+
 
 }
 
