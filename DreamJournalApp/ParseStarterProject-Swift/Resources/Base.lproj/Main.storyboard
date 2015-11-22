@@ -65,6 +65,9 @@
                                 <rect key="frame" x="241" y="228" width="119" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Dream Dictionary"/>
+                                <connections>
+                                    <segue destination="2hZ-sj-w69" kind="show" id="gOb-ee-ref"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUZ-Du-rFy">
                                 <rect key="frame" x="255" y="173" width="90" height="30"/>
@@ -97,6 +100,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUb-bE-uzL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1108" y="239"/>
+        </scene>
+        <!--Dictionary View Controller-->
+        <scene sceneID="i5A-EJ-NXO">
+            <objects>
+                <viewController id="2hZ-sj-w69" customClass="DictionaryViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h16-1C-iit"/>
+                        <viewControllerLayoutGuide type="bottom" id="qlD-vg-Hlc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ST8-QL-eWb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8d1-tG-Dr5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Dream Dictionary" id="2K4-dH-pUY">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="LRC-R1-qee">
+                                            <connections>
+                                                <segue destination="Tz3-iO-F2e" kind="show" id="RgY-Ro-6ab"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qeu-lE-bPp">
+                                <rect key="frame" x="197" y="153" width="207" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="57d-kU-cjK"/>
+                                    <constraint firstAttribute="width" constant="207" id="GQw-3G-U3F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhq-IA-rAg">
+                                <rect key="frame" x="272" y="220" width="57" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Look Up"/>
+                                <connections>
+                                    <action selector="lookUp:" destination="2hZ-sj-w69" eventType="touchUpInside" id="Hvo-H9-FhH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Type in a word related to your dream to find out its meaning" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3O-hT-w6e">
+                                <rect key="frame" x="68" y="74" width="464" height="32"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8d1-tG-Dr5" firstAttribute="top" secondItem="ST8-QL-eWb" secondAttribute="topMargin" id="Isa-Fj-RlO"/>
+                            <constraint firstItem="P3O-hT-w6e" firstAttribute="leading" secondItem="ST8-QL-eWb" secondAttribute="leadingMargin" constant="48" id="My6-Lq-kd9"/>
+                            <constraint firstItem="8d1-tG-Dr5" firstAttribute="centerX" secondItem="ST8-QL-eWb" secondAttribute="centerX" id="RNS-Z3-iV2"/>
+                            <constraint firstItem="8d1-tG-Dr5" firstAttribute="leading" secondItem="ST8-QL-eWb" secondAttribute="leadingMargin" constant="-20" id="V9M-l1-aq5"/>
+                            <constraint firstItem="Qeu-lE-bPp" firstAttribute="centerX" secondItem="ST8-QL-eWb" secondAttribute="centerX" id="WjY-da-8ym"/>
+                            <constraint firstItem="P3O-hT-w6e" firstAttribute="centerX" secondItem="ST8-QL-eWb" secondAttribute="centerX" id="hiC-Ob-kQs"/>
+                            <constraint firstItem="P3O-hT-w6e" firstAttribute="top" secondItem="8d1-tG-Dr5" secondAttribute="bottom" constant="30" id="jjg-SA-x64"/>
+                            <constraint firstItem="Qeu-lE-bPp" firstAttribute="top" secondItem="P3O-hT-w6e" secondAttribute="bottom" constant="47" id="oGS-Va-8E0"/>
+                            <constraint firstItem="Uhq-IA-rAg" firstAttribute="top" secondItem="Qeu-lE-bPp" secondAttribute="bottom" constant="37" id="sp1-JM-cO7"/>
+                            <constraint firstItem="Uhq-IA-rAg" firstAttribute="centerX" secondItem="ST8-QL-eWb" secondAttribute="centerX" id="tPw-4J-I1C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="instruction" destination="P3O-hT-w6e" id="LPa-Cy-K95"/>
+                        <outlet property="word" destination="Qeu-lE-bPp" id="ST9-FT-VYO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fN8-fc-gTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="990"/>
         </scene>
         <!--Add Dream View Controller-->
         <scene sceneID="uu8-Pm-0LK">
@@ -217,6 +295,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Kf5-3f-Jh6"/>
+        <segue reference="RgY-Ro-6ab"/>
     </inferredMetricsTieBreakers>
 </document>
