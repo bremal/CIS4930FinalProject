@@ -237,10 +237,10 @@
             </objects>
             <point key="canvasLocation" x="1820" y="990"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="ofF-dk-qgE">
             <objects>
-                <viewController id="FEI-jD-wAl" sceneMemberID="viewController">
+                <viewController id="FEI-jD-wAl" customClass="WebViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aPk-p0-x8q"/>
                         <viewControllerLayoutGuide type="bottom" id="ut6-YL-ukD"/>
@@ -249,11 +249,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2CM-hF-etz">
+                                <rect key="frame" x="0.0" y="75" width="320" height="421"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="a9i-eU-ZGj"/>
+                                    <constraint firstAttribute="height" constant="421" id="ux0-BG-PMz"/>
+                                </constraints>
+                            </webView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfw-rM-Cc8">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <animations/>
                                 <items>
-                                    <navigationItem title="DreamMoods" id="LCw-Tx-k1c"/>
+                                    <navigationItem title="DreamMoods" id="LCw-Tx-k1c">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="uuf-JK-2CO">
+                                            <connections>
+                                                <segue destination="2hZ-sj-w69" kind="show" id="sTa-mX-sRI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -261,10 +276,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gfw-rM-Cc8" firstAttribute="top" secondItem="kiD-mK-uQ6" secondAttribute="topMargin" id="2oK-5Z-uAS"/>
+                            <constraint firstItem="2CM-hF-etz" firstAttribute="top" secondItem="gfw-rM-Cc8" secondAttribute="bottom" constant="31" id="5Uj-UR-ISS"/>
                             <constraint firstItem="gfw-rM-Cc8" firstAttribute="centerX" secondItem="kiD-mK-uQ6" secondAttribute="centerX" id="FbW-ka-M3J"/>
+                            <constraint firstItem="2CM-hF-etz" firstAttribute="leading" secondItem="kiD-mK-uQ6" secondAttribute="leadingMargin" constant="-20" id="hwS-vl-ILf"/>
                             <constraint firstItem="gfw-rM-Cc8" firstAttribute="leading" secondItem="kiD-mK-uQ6" secondAttribute="leadingMargin" constant="-20" id="iVz-6o-vNM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webSite" destination="2CM-hF-etz" id="qtT-F0-zqL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMU-CB-WS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -387,9 +407,28 @@
             </objects>
             <point key="canvasLocation" x="1850" y="239"/>
         </scene>
+        <!--Past Dreams View Controller-->
+        <scene sceneID="V4I-01-8U2">
+            <objects>
+                <viewController id="d5n-kT-HbK" customClass="PastDreamsViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LOM-DX-nHH"/>
+                        <viewControllerLayoutGuide type="bottom" id="dzm-c6-oGI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QbJ-YF-4E6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEy-HI-eM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1850" y="-457"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="RgY-Ro-6ab"/>
-        <segue reference="9xu-hu-wrt"/>
+        <segue reference="sTa-mX-sRI"/>
     </inferredMetricsTieBreakers>
 </document>
