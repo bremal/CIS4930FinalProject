@@ -49,6 +49,30 @@ class DictionaryViewController: UIViewController {
             }
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showDefinition" {
+            if word.text == "" {
+                
+            }
+            let destinationVC = segue.destinationViewController as! DefinitionViewController
+            destinationVC.stringFromParse = stringToPass
+        }
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
+        if identifier == "showDefinition" {
+            if word.text == "" {
+                return false
+            }
+            else {
+                return true
+            }
+        }
+        else {
+            return true
+        }
+    }
 
     /*
     // MARK: - Navigation

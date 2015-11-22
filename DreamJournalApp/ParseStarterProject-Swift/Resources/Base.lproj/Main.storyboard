@@ -142,6 +142,7 @@
                                 <state key="normal" title="Look Up"/>
                                 <connections>
                                     <action selector="lookUp:" destination="2hZ-sj-w69" eventType="touchUpInside" id="Hvo-H9-FhH"/>
+                                    <segue destination="sXi-Ms-QdV" kind="show" identifier="showDefinition" id="JyU-pq-rk9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Type in a word related to your dream to find out its meaning" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3O-hT-w6e">
@@ -175,6 +176,99 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fN8-fc-gTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1108" y="990"/>
+        </scene>
+        <!--Definition View Controller-->
+        <scene sceneID="70T-6m-yu6">
+            <objects>
+                <viewController id="sXi-Ms-QdV" customClass="DefinitionViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aCZ-qm-HCK"/>
+                        <viewControllerLayoutGuide type="bottom" id="S83-nO-Tep"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qIf-L1-Wun">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPR-QO-zcY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Definition" id="Xer-vf-XEk">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="9WG-AS-vcP">
+                                            <connections>
+                                                <segue destination="2hZ-sj-w69" kind="show" id="9xu-hu-wrt"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="More Info" id="YTe-BJ-LAO">
+                                            <connections>
+                                                <segue destination="FEI-jD-wAl" kind="show" identifier="" id="zda-kF-sLy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPt-n4-nq0">
+                                <rect key="frame" x="34" y="77" width="283" height="312"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="312" id="3yD-BG-yOm"/>
+                                    <constraint firstAttribute="width" constant="283" id="ZHU-gJ-0s5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UPt-n4-nq0" firstAttribute="leading" secondItem="qIf-L1-Wun" secondAttribute="leadingMargin" constant="14" id="Do0-ax-Xt0"/>
+                            <constraint firstItem="cPR-QO-zcY" firstAttribute="centerX" secondItem="qIf-L1-Wun" secondAttribute="centerX" id="HCA-x2-3z5"/>
+                            <constraint firstItem="cPR-QO-zcY" firstAttribute="top" secondItem="qIf-L1-Wun" secondAttribute="topMargin" id="ngy-TF-fpd"/>
+                            <constraint firstItem="UPt-n4-nq0" firstAttribute="top" secondItem="cPR-QO-zcY" secondAttribute="bottom" constant="33" id="pHv-Oa-pPF"/>
+                            <constraint firstItem="cPR-QO-zcY" firstAttribute="leading" secondItem="qIf-L1-Wun" secondAttribute="leadingMargin" constant="-20" id="rk8-Cc-p45"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayDefinition" destination="UPt-n4-nq0" id="2wf-zc-V10"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yvo-fF-4M7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="990"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ofF-dk-qgE">
+            <objects>
+                <viewController id="FEI-jD-wAl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aPk-p0-x8q"/>
+                        <viewControllerLayoutGuide type="bottom" id="ut6-YL-ukD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kiD-mK-uQ6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfw-rM-Cc8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="DreamMoods" id="LCw-Tx-k1c"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gfw-rM-Cc8" firstAttribute="top" secondItem="kiD-mK-uQ6" secondAttribute="topMargin" id="2oK-5Z-uAS"/>
+                            <constraint firstItem="gfw-rM-Cc8" firstAttribute="centerX" secondItem="kiD-mK-uQ6" secondAttribute="centerX" id="FbW-ka-M3J"/>
+                            <constraint firstItem="gfw-rM-Cc8" firstAttribute="leading" secondItem="kiD-mK-uQ6" secondAttribute="leadingMargin" constant="-20" id="iVz-6o-vNM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMU-CB-WS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2485" y="990"/>
         </scene>
         <!--Add Dream View Controller-->
         <scene sceneID="uu8-Pm-0LK">
@@ -296,5 +390,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="RgY-Ro-6ab"/>
+        <segue reference="9xu-hu-wrt"/>
     </inferredMetricsTieBreakers>
 </document>
