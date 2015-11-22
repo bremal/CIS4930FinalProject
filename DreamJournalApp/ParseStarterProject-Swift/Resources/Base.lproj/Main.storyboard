@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login-->
@@ -38,7 +39,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rUN-WY-TJs">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUN-WY-TJs">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <animations/>
                                 <items>
@@ -52,14 +53,170 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFn-yr-1Vm">
+                                <rect key="frame" x="262" y="120" width="77" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Add Dream"/>
+                                <connections>
+                                    <segue destination="JWv-hT-Dmv" kind="show" identifier="addDream" id="Rpv-D0-Dsl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRp-Zn-9sX">
+                                <rect key="frame" x="241" y="228" width="119" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Dream Dictionary"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUZ-Du-rFy">
+                                <rect key="frame" x="255" y="173" width="90" height="30"/>
+                                <animations/>
+                                <state key="normal" title="View Dreams"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spw-Ts-ghH">
+                                <rect key="frame" x="275" y="285" width="50" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Graphs"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JFn-yr-1Vm" firstAttribute="centerX" secondItem="afK-Hx-3eA" secondAttribute="centerX" id="FIU-oB-iUR"/>
+                            <constraint firstItem="rUN-WY-TJs" firstAttribute="leading" secondItem="afK-Hx-3eA" secondAttribute="leadingMargin" constant="-20" id="NbG-YP-zAG"/>
+                            <constraint firstItem="rUN-WY-TJs" firstAttribute="centerX" secondItem="afK-Hx-3eA" secondAttribute="centerX" id="PHJ-q1-c2C"/>
+                            <constraint firstItem="UUZ-Du-rFy" firstAttribute="top" secondItem="JFn-yr-1Vm" secondAttribute="bottom" constant="23" id="Sdv-uS-sGh"/>
+                            <constraint firstItem="kRp-Zn-9sX" firstAttribute="centerX" secondItem="afK-Hx-3eA" secondAttribute="centerX" id="VZc-sv-vw1"/>
+                            <constraint firstItem="kRp-Zn-9sX" firstAttribute="top" secondItem="UUZ-Du-rFy" secondAttribute="bottom" constant="25" id="Wfe-B9-IsG"/>
+                            <constraint firstItem="JFn-yr-1Vm" firstAttribute="top" secondItem="rUN-WY-TJs" secondAttribute="bottom" constant="76" id="c2t-LO-1Mj"/>
+                            <constraint firstItem="rUN-WY-TJs" firstAttribute="top" secondItem="afK-Hx-3eA" secondAttribute="topMargin" id="cW6-EJ-ZoW"/>
+                            <constraint firstItem="Spw-Ts-ghH" firstAttribute="top" secondItem="kRp-Zn-9sX" secondAttribute="bottom" constant="27" id="gzy-jU-2li"/>
+                            <constraint firstItem="Spw-Ts-ghH" firstAttribute="centerX" secondItem="afK-Hx-3eA" secondAttribute="centerX" id="hUz-nW-M3a"/>
+                            <constraint firstItem="UUZ-Du-rFy" firstAttribute="centerX" secondItem="afK-Hx-3eA" secondAttribute="centerX" id="knf-9q-zYX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUb-bE-uzL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1108" y="239"/>
         </scene>
+        <!--Add Dream View Controller-->
+        <scene sceneID="uu8-Pm-0LK">
+            <objects>
+                <viewController id="JWv-hT-Dmv" customClass="AddDreamViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="to0-UT-J9N"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHc-39-s4e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FqD-5E-SXe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fju-96-rrf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Add Dream" id="w0Y-Zs-YhE">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="48h-jr-l3d">
+                                            <connections>
+                                                <segue destination="Tz3-iO-F2e" kind="show" id="Kf5-3f-Jh6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Add" id="JI0-Ue-lzT">
+                                            <connections>
+                                                <action selector="addDream:" destination="JWv-hT-Dmv" id="CNY-i5-aCm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="r8x-O2-fHW">
+                                <rect key="frame" x="122" y="44" width="356" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="356" id="f0W-Kf-UcN"/>
+                                    <constraint firstAttribute="height" constant="50" id="tbw-31-xbb"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="469826582.41080701">
+                                    <!--2015-11-21 19:23:02 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gp9-88-gBN">
+                                <rect key="frame" x="202" y="108" width="197" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="rjO-tU-31r"/>
+                                    <constraint firstAttribute="height" constant="30" id="tXI-qi-7s2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select type of dream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSd-Ck-Ied">
+                                <rect key="frame" x="220" y="153" width="160" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type a description of your dream" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ObE-3C-ydR">
+                                <rect key="frame" x="66" y="264" width="356" height="184"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="356" id="Syu-OB-tQ0"/>
+                                    <constraint firstAttribute="height" constant="184" id="p2B-Lt-McP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAX-Ms-YBE">
+                                <rect key="frame" x="251" y="456" width="99" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Find keywords"/>
+                                <connections>
+                                    <action selector="findKeywords:" destination="JWv-hT-Dmv" eventType="touchUpInside" id="h1m-sq-vDc"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWH-qt-16h">
+                                <rect key="frame" x="113" y="182" width="374" height="68"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Be2-Fq-pf6"/>
+                                    <constraint firstAttribute="height" constant="68" id="TEQ-8u-6JA"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gp9-88-gBN" firstAttribute="top" secondItem="r8x-O2-fHW" secondAttribute="bottom" constant="14" id="1Bx-9v-Qeb"/>
+                            <constraint firstItem="PAX-Ms-YBE" firstAttribute="centerX" secondItem="FqD-5E-SXe" secondAttribute="centerX" id="2nm-uV-Ozo"/>
+                            <constraint firstItem="CWH-qt-16h" firstAttribute="centerX" secondItem="FqD-5E-SXe" secondAttribute="centerX" id="KRJ-tM-Ggo"/>
+                            <constraint firstItem="mSd-Ck-Ied" firstAttribute="centerX" secondItem="FqD-5E-SXe" secondAttribute="centerX" id="Lr6-RM-WrB"/>
+                            <constraint firstItem="r8x-O2-fHW" firstAttribute="centerX" secondItem="FqD-5E-SXe" secondAttribute="centerX" id="OD4-1j-lji"/>
+                            <constraint firstItem="Gp9-88-gBN" firstAttribute="centerX" secondItem="FqD-5E-SXe" secondAttribute="centerX" id="Vgh-tu-Stx"/>
+                            <constraint firstItem="CWH-qt-16h" firstAttribute="top" secondItem="mSd-Ck-Ied" secondAttribute="bottom" constant="8" id="WUg-FO-L7l"/>
+                            <constraint firstItem="fju-96-rrf" firstAttribute="centerX" secondItem="FqD-5E-SXe" secondAttribute="centerX" id="Xp8-tN-grV"/>
+                            <constraint firstItem="fju-96-rrf" firstAttribute="top" secondItem="FqD-5E-SXe" secondAttribute="topMargin" id="YYs-cB-wNf"/>
+                            <constraint firstItem="r8x-O2-fHW" firstAttribute="top" secondItem="fju-96-rrf" secondAttribute="bottom" id="dxd-ix-BnC"/>
+                            <constraint firstItem="mSd-Ck-Ied" firstAttribute="top" secondItem="Gp9-88-gBN" secondAttribute="bottom" constant="15" id="keB-SJ-jIe"/>
+                            <constraint firstItem="fju-96-rrf" firstAttribute="leading" secondItem="FqD-5E-SXe" secondAttribute="leadingMargin" constant="-20" id="ofk-zv-PpA"/>
+                            <constraint firstItem="PAX-Ms-YBE" firstAttribute="top" secondItem="ObE-3C-ydR" secondAttribute="bottom" constant="8" id="utj-G6-Lbg"/>
+                            <constraint firstItem="ObE-3C-ydR" firstAttribute="leading" secondItem="FqD-5E-SXe" secondAttribute="leadingMargin" constant="46" id="z9t-8b-ffA"/>
+                            <constraint firstItem="ObE-3C-ydR" firstAttribute="top" secondItem="CWH-qt-16h" secondAttribute="bottom" constant="14" id="zSg-ry-1GM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="date" destination="r8x-O2-fHW" id="ciG-1e-nts"/>
+                        <outlet property="dreamTitle" destination="Gp9-88-gBN" id="HhF-iA-1CT"/>
+                        <outlet property="dreamType" destination="CWH-qt-16h" id="f2Q-kQ-kB9"/>
+                        <outlet property="userText" destination="ObE-3C-ydR" id="WRE-Lo-3HC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ca-vu-Oun" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1850" y="239"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Kf5-3f-Jh6"/>
+    </inferredMetricsTieBreakers>
 </document>
