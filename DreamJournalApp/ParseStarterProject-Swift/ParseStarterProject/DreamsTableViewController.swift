@@ -11,6 +11,7 @@ import Parse
 
 class DreamsTableViewController: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
     var userDreamEntries = [PFObject]()
     var dreamTitles = [String]()
     var dreamDates = [String]()
@@ -50,9 +51,10 @@ class DreamsTableViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "showItemDetail" {
-            let indexPath:NSIndexPath = self.tableView.indexPathForSelectedRow()!
-            let detailVC:ItemDetailViewController = segue.destinationViewController as ItemDetailViewController
-            detailVC.item = items[indexPath.row] as Item
+            let indexPath:NSIndexPath = self.tableView.indexPathForSelectedRow!
+            let detailVC:DetailedEntryViewController = segue.destinationViewController as! DetailedEntryViewController
+            detailVC.dreamTitle = dreamTitles[indexPath.row]
+            detailVC.dreamDate = dreamDates[indexPath.row]
         }
     }
     
