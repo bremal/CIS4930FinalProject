@@ -1,17 +1,15 @@
 //
-//  PastDreamsViewController.swift
+//  DetailedEntryViewController.swift
 //  ParseStarterProject-Swift
 //
-//  Created by Breanna Maldonado on 11/21/15.
+//  Created by Breanna Maldonado on 11/23/15.
 //  Copyright © 2015 Parse. All rights reserved.
 //
 
 import UIKit
 
-class PastDreamsViewController: UIViewController {
+class DetailedEntryViewController: UIViewController {
 
-    @IBOutlet var pastDreams: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +20,6 @@ class PastDreamsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
 
     /*

@@ -73,6 +73,9 @@
                                 <rect key="frame" x="255" y="173" width="90" height="30"/>
                                 <animations/>
                                 <state key="normal" title="View Dreams"/>
+                                <connections>
+                                    <segue destination="d5n-kT-HbK" kind="show" id="MW8-RT-nwd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spw-Ts-ghH">
                                 <rect key="frame" x="275" y="285" width="50" height="30"/>
@@ -149,7 +152,7 @@
                                 <rect key="frame" x="68" y="74" width="464" height="32"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -215,7 +218,7 @@
                                     <constraint firstAttribute="width" constant="283" id="ZHU-gJ-0s5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -345,20 +348,9 @@
                                 <rect key="frame" x="220" y="153" width="160" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type a description of your dream" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ObE-3C-ydR">
-                                <rect key="frame" x="66" y="264" width="356" height="184"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="356" id="Syu-OB-tQ0"/>
-                                    <constraint firstAttribute="height" constant="184" id="p2B-Lt-McP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAX-Ms-YBE">
                                 <rect key="frame" x="251" y="456" width="99" height="30"/>
                                 <animations/>
@@ -375,25 +367,36 @@
                                     <constraint firstAttribute="height" constant="68" id="TEQ-8u-6JA"/>
                                 </constraints>
                             </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type a description of your dream" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ObE-3C-ydR">
+                                <rect key="frame" x="20" y="264" width="304" height="184"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="304" id="FOx-Zm-jsc"/>
+                                    <constraint firstAttribute="height" constant="184" id="cxa-WZ-ITW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Gp9-88-gBN" firstAttribute="top" secondItem="r8x-O2-fHW" secondAttribute="bottom" constant="14" id="1Bx-9v-Qeb"/>
-                            <constraint firstItem="PAX-Ms-YBE" firstAttribute="centerX" secondItem="FqD-5E-SXe" secondAttribute="centerX" id="2nm-uV-Ozo"/>
+                            <constraint firstItem="ObE-3C-ydR" firstAttribute="top" secondItem="CWH-qt-16h" secondAttribute="bottom" constant="14" id="7TE-yL-l2L"/>
                             <constraint firstItem="CWH-qt-16h" firstAttribute="centerX" secondItem="FqD-5E-SXe" secondAttribute="centerX" id="KRJ-tM-Ggo"/>
                             <constraint firstItem="mSd-Ck-Ied" firstAttribute="centerX" secondItem="FqD-5E-SXe" secondAttribute="centerX" id="Lr6-RM-WrB"/>
                             <constraint firstItem="r8x-O2-fHW" firstAttribute="centerX" secondItem="FqD-5E-SXe" secondAttribute="centerX" id="OD4-1j-lji"/>
+                            <constraint firstItem="PAX-Ms-YBE" firstAttribute="centerX" secondItem="FqD-5E-SXe" secondAttribute="centerX" id="ReO-FS-66d"/>
+                            <constraint firstItem="PAX-Ms-YBE" firstAttribute="top" secondItem="ObE-3C-ydR" secondAttribute="bottom" constant="8" id="TPq-2W-3xQ"/>
                             <constraint firstItem="Gp9-88-gBN" firstAttribute="centerX" secondItem="FqD-5E-SXe" secondAttribute="centerX" id="Vgh-tu-Stx"/>
                             <constraint firstItem="CWH-qt-16h" firstAttribute="top" secondItem="mSd-Ck-Ied" secondAttribute="bottom" constant="8" id="WUg-FO-L7l"/>
                             <constraint firstItem="fju-96-rrf" firstAttribute="centerX" secondItem="FqD-5E-SXe" secondAttribute="centerX" id="Xp8-tN-grV"/>
                             <constraint firstItem="fju-96-rrf" firstAttribute="top" secondItem="FqD-5E-SXe" secondAttribute="topMargin" id="YYs-cB-wNf"/>
                             <constraint firstItem="r8x-O2-fHW" firstAttribute="top" secondItem="fju-96-rrf" secondAttribute="bottom" id="dxd-ix-BnC"/>
                             <constraint firstItem="mSd-Ck-Ied" firstAttribute="top" secondItem="Gp9-88-gBN" secondAttribute="bottom" constant="15" id="keB-SJ-jIe"/>
+                            <constraint firstItem="ObE-3C-ydR" firstAttribute="leading" secondItem="FqD-5E-SXe" secondAttribute="leadingMargin" id="kg8-qf-kJr"/>
                             <constraint firstItem="fju-96-rrf" firstAttribute="leading" secondItem="FqD-5E-SXe" secondAttribute="leadingMargin" constant="-20" id="ofk-zv-PpA"/>
-                            <constraint firstItem="PAX-Ms-YBE" firstAttribute="top" secondItem="ObE-3C-ydR" secondAttribute="bottom" constant="8" id="utj-G6-Lbg"/>
-                            <constraint firstItem="ObE-3C-ydR" firstAttribute="leading" secondItem="FqD-5E-SXe" secondAttribute="leadingMargin" constant="46" id="z9t-8b-ffA"/>
-                            <constraint firstItem="ObE-3C-ydR" firstAttribute="top" secondItem="CWH-qt-16h" secondAttribute="bottom" constant="14" id="zSg-ry-1GM"/>
                         </constraints>
                     </view>
                     <connections>
@@ -407,10 +410,10 @@
             </objects>
             <point key="canvasLocation" x="1850" y="239"/>
         </scene>
-        <!--Past Dreams View Controller-->
+        <!--Dreams Table View Controller-->
         <scene sceneID="V4I-01-8U2">
             <objects>
-                <viewController id="d5n-kT-HbK" customClass="PastDreamsViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d5n-kT-HbK" customClass="DreamsTableViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LOM-DX-nHH"/>
                         <viewControllerLayoutGuide type="bottom" id="dzm-c6-oGI"/>
@@ -418,17 +421,86 @@
                     <view key="view" contentMode="scaleToFill" id="QbJ-YF-4E6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxB-iw-ork">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Dream Entries" id="JgI-la-dIq">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="kIA-hS-9pd">
+                                            <connections>
+                                                <segue destination="Tz3-iO-F2e" kind="show" id="R9D-WW-MFQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sg1-d1-HKV">
+                                <rect key="frame" x="20" y="110" width="400" height="293"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="293" id="7sr-fH-8ZU"/>
+                                    <constraint firstAttribute="width" constant="400" id="JPk-ZT-jYB"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Ozl-bZ-RdW">
+                                        <rect key="frame" x="0.0" y="28" width="400" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ozl-bZ-RdW" id="IHR-cR-jGZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="d5n-kT-HbK" id="Qaj-ay-zmS"/>
+                                    <outlet property="delegate" destination="d5n-kT-HbK" id="ZgJ-zD-595"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sg1-d1-HKV" firstAttribute="leading" secondItem="QbJ-YF-4E6" secondAttribute="leadingMargin" id="3PN-xy-MoZ"/>
+                            <constraint firstItem="SxB-iw-ork" firstAttribute="leading" secondItem="QbJ-YF-4E6" secondAttribute="leadingMargin" constant="-20" id="Cys-uR-puP"/>
+                            <constraint firstItem="sg1-d1-HKV" firstAttribute="top" secondItem="SxB-iw-ork" secondAttribute="bottom" constant="66" id="G56-ln-BMK"/>
+                            <constraint firstItem="SxB-iw-ork" firstAttribute="centerX" secondItem="QbJ-YF-4E6" secondAttribute="centerX" id="ouJ-QF-PVL"/>
+                            <constraint firstItem="SxB-iw-ork" firstAttribute="top" secondItem="QbJ-YF-4E6" secondAttribute="topMargin" id="tJn-SY-WZ8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="qz2-yd-Tym" kind="show" id="nxO-mz-xoi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEy-HI-eM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1850" y="-457"/>
         </scene>
+        <!--Detailed Entry View Controller-->
+        <scene sceneID="c15-9D-ef4">
+            <objects>
+                <viewController id="qz2-yd-Tym" customClass="DetailedEntryViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sQB-m8-9Td"/>
+                        <viewControllerLayoutGuide type="bottom" id="1wX-va-zKE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b9v-pj-feB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TtM-qT-1y3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2510" y="-457"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RgY-Ro-6ab"/>
-        <segue reference="sTa-mX-sRI"/>
+        <segue reference="R9D-WW-MFQ"/>
+        <segue reference="gOb-ee-ref"/>
     </inferredMetricsTieBreakers>
 </document>
