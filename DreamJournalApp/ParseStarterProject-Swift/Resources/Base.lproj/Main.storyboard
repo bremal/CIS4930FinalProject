@@ -27,6 +27,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="uzt-xR-ZN9">
+            <objects>
+                <viewController id="K7k-Ge-5nU" customClass="SettingsViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4c7-If-Jia"/>
+                        <viewControllerLayoutGuide type="bottom" id="bf8-Cx-PZJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hGL-n7-KMP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBM-WK-fhE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Settings" id="NIc-X3-a0Y">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="nVX-h3-b8k">
+                                            <connections>
+                                                <segue destination="Tz3-iO-F2e" kind="show" id="gB5-NP-XRY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Xkf-sm-fVh">
+                                <rect key="frame" x="0.0" y="44" width="600" height="117"/>
+                                <animations/>
+                                <date key="date" timeIntervalSinceReferenceDate="470239849.02546501">
+                                    <!--2015-11-26 14:10:49 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePicker:" destination="K7k-Ge-5nU" eventType="valueChanged" id="wzA-Pk-9r8"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmd-ur-2fo">
+                                <rect key="frame" x="254" y="178" width="93" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Set Reminder"/>
+                                <connections>
+                                    <action selector="setReminder:" destination="K7k-Ge-5nU" eventType="touchUpInside" id="SFc-9E-UTd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xkf-sm-fVh" firstAttribute="top" secondItem="WBM-WK-fhE" secondAttribute="bottom" id="3Ge-8g-VNW"/>
+                            <constraint firstItem="kmd-ur-2fo" firstAttribute="centerX" secondItem="hGL-n7-KMP" secondAttribute="centerX" id="CfO-K4-UAf"/>
+                            <constraint firstItem="WBM-WK-fhE" firstAttribute="centerX" secondItem="hGL-n7-KMP" secondAttribute="centerX" id="Jei-YD-BMn"/>
+                            <constraint firstItem="Xkf-sm-fVh" firstAttribute="centerX" secondItem="hGL-n7-KMP" secondAttribute="centerX" id="UzG-du-DtQ"/>
+                            <constraint firstItem="WBM-WK-fhE" firstAttribute="leading" secondItem="hGL-n7-KMP" secondAttribute="leadingMargin" constant="-20" id="W0I-KF-tak"/>
+                            <constraint firstItem="kmd-ur-2fo" firstAttribute="top" secondItem="Xkf-sm-fVh" secondAttribute="bottom" constant="17" id="abp-xL-wl3"/>
+                            <constraint firstItem="WBM-WK-fhE" firstAttribute="top" secondItem="hGL-n7-KMP" secondAttribute="topMargin" id="xV4-Zf-RUD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePickerOutlet" destination="Xkf-sm-fVh" id="JGK-dC-nSj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wqn-Ff-FfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="990"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="mvT-gi-zuI">
             <objects>
@@ -53,14 +117,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFn-yr-1Vm">
-                                <rect key="frame" x="262" y="120" width="77" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Add Dream"/>
-                                <connections>
-                                    <segue destination="JWv-hT-Dmv" kind="show" identifier="addDream" id="Rpv-D0-Dsl"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRp-Zn-9sX">
                                 <rect key="frame" x="241" y="228" width="119" height="30"/>
                                 <animations/>
@@ -82,6 +138,22 @@
                                 <animations/>
                                 <state key="normal" title="Graphs"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zy6-pi-gbd">
+                                <rect key="frame" x="272" y="337" width="57" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="K7k-Ge-5nU" kind="show" id="scO-Vm-Ag3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFn-yr-1Vm">
+                                <rect key="frame" x="262" y="120" width="77" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Add Dream"/>
+                                <connections>
+                                    <segue destination="JWv-hT-Dmv" kind="show" identifier="addDream" id="Rpv-D0-Dsl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,6 +169,8 @@
                             <constraint firstItem="Spw-Ts-ghH" firstAttribute="top" secondItem="kRp-Zn-9sX" secondAttribute="bottom" constant="27" id="gzy-jU-2li"/>
                             <constraint firstItem="Spw-Ts-ghH" firstAttribute="centerX" secondItem="afK-Hx-3eA" secondAttribute="centerX" id="hUz-nW-M3a"/>
                             <constraint firstItem="UUZ-Du-rFy" firstAttribute="centerX" secondItem="afK-Hx-3eA" secondAttribute="centerX" id="knf-9q-zYX"/>
+                            <constraint firstItem="Zy6-pi-gbd" firstAttribute="centerX" secondItem="afK-Hx-3eA" secondAttribute="centerX" id="ku8-DU-sLe"/>
+                            <constraint firstItem="Zy6-pi-gbd" firstAttribute="top" secondItem="Spw-Ts-ghH" secondAttribute="bottom" constant="22" id="srz-Em-vJr"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -561,8 +635,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R9D-WW-MFQ"/>
-        <segue reference="MKE-FG-kyg"/>
+        <segue reference="gB5-NP-XRY"/>
         <segue reference="gOb-ee-ref"/>
+        <segue reference="MW8-RT-nwd"/>
     </inferredMetricsTieBreakers>
 </document>

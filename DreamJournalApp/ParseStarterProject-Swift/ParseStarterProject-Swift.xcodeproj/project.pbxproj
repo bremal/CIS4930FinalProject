@@ -24,6 +24,7 @@
 		F9023CB31C0150FA00171FEC /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9023CB21C0150FA00171FEC /* DictionaryViewController.swift */; };
 		F9BA0AC31C0388C400F1751A /* DreamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA0AC21C0388C400F1751A /* DreamsTableViewController.swift */; };
 		F9BA0AC51C039BE000F1751A /* DetailedEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA0AC41C039BE000F1751A /* DetailedEntryViewController.swift */; };
+		F9C470121C074BE5001D9CF1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C470111C074BE5001D9CF1 /* SettingsViewController.swift */; };
 		F9F2E36D1C015D740072F8AC /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F2E36C1C015D740072F8AC /* DefinitionViewController.swift */; };
 		F9F2E36F1C01730B0072F8AC /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F2E36E1C01730B0072F8AC /* WebViewController.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		F9023CB21C0150FA00171FEC /* DictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		F9BA0AC21C0388C400F1751A /* DreamsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamsTableViewController.swift; sourceTree = "<group>"; };
 		F9BA0AC41C039BE000F1751A /* DetailedEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedEntryViewController.swift; sourceTree = "<group>"; };
+		F9C470111C074BE5001D9CF1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F9F2E36C1C015D740072F8AC /* DefinitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionViewController.swift; sourceTree = "<group>"; };
 		F9F2E36E1C01730B0072F8AC /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				81BA814C1A49DA1800E65899 /* LoginViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
+				F9C470111C074BE5001D9CF1 /* SettingsViewController.swift */,
 				F9BA0AC41C039BE000F1751A /* DetailedEntryViewController.swift */,
 				F9BA0AC21C0388C400F1751A /* DreamsTableViewController.swift */,
 				F9F2E36E1C01730B0072F8AC /* WebViewController.swift */,
@@ -235,6 +238,7 @@
 				F9023CB31C0150FA00171FEC /* DictionaryViewController.swift in Sources */,
 				F9F2E36D1C015D740072F8AC /* DefinitionViewController.swift in Sources */,
 				F9BA0AC51C039BE000F1751A /* DetailedEntryViewController.swift in Sources */,
+				F9C470121C074BE5001D9CF1 /* SettingsViewController.swift in Sources */,
 				F9023CB11C00FB8D00171FEC /* AddDreamViewController.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* LoginViewController.swift in Sources */,
 				F9F2E36F1C01730B0072F8AC /* WebViewController.swift in Sources */,
