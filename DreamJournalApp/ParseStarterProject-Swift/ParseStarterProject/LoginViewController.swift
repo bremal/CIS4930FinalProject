@@ -14,21 +14,30 @@ import ParseUI
 
 class LoginViewController: UIViewController, PFLogInViewControllerDelegate {
 
+     var backgroundImage = UIImageView()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        // set our custom background image
+       
     }
     
+    
     override func viewDidAppear(animated: Bool) {
-        if(PFUser.currentUser()!.username == nil) {
+        if(PFUser.currentUser()?.username == nil) {
             let logInController = MyLogInViewController()
             logInController.delegate = self
             self.presentViewController(logInController, animated:true, completion: nil)
+            
         }
         else {
             performSegueWithIdentifier("loginSuccess", sender: nil)
@@ -42,20 +51,43 @@ class LoginViewController: UIViewController, PFLogInViewControllerDelegate {
     func logInViewControllerDidCancelLogIn(controller: PFLogInViewController) -> Void {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
 
 
 }
 
 class MyLogInViewController : PFLogInViewController {
     
+    var backgroundImage = UIImageView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.view.backgroundColor = UIColor.darkGrayColor()
+        let logo = UILabel()
+        logo.text = "Dream Daily"
+        logo.textColor = UIColor.whiteColor()
+        logo.font = UIFont(name: "Pacifico", size: 40)
+        logo.shadowColor = UIColor.lightGrayColor()
+        logo.shadowOffset = CGSizeMake(2, 2)
+        logInView?.logo = logo
         
-        let image = UIImage(named: "")
+        // position logo at top with larger frame
+        logInView!.logo!.sizeToFit()
+        let logoFrame = logInView!.logo!.frame
+        logInView!.logo!.frame = CGRectMake(logoFrame.origin.x, logInView!.usernameField!.frame.origin.y - logoFrame.height, logInView!.frame.width,  logoFrame.height)
         
-        let logoView = UIImageView(image: image)
-        self.logInView!.logo = logoView
+        backgroundImage = UIImageView(image: UIImage(named: "loginbackground.jpg"))
+        backgroundImage.contentMode = UIViewContentMode.ScaleAspectFill
+        self.logInView!.insertSubview(backgroundImage, atIndex: 0)
+        
+        self.signUpController = SignUpViewController()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        // stretch background image to fill screen
+        backgroundImage.frame = CGRectMake( 0,  0,  self.logInView!.frame.width,  self.logInView!.frame.height)
     }
 }
+
+

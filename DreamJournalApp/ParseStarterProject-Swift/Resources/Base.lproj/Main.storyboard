@@ -17,8 +17,20 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginbackground" translatesAutoresizingMaskIntoConstraints="NO" id="TJl-BF-2rY">
+                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TJl-BF-2rY" secondAttribute="trailing" id="3Dd-hK-RLQ"/>
+                            <constraint firstItem="TJl-BF-2rY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JIR-zH-V2w"/>
+                            <constraint firstItem="TJl-BF-2rY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="OOz-Fh-C2P"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TJl-BF-2rY" secondAttribute="bottom" id="X37-uP-oe9"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="Tz3-iO-F2e" kind="show" identifier="loginSuccess" id="t6S-2G-xcd"/>
@@ -26,6 +38,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="292"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hSe-lT-GhF">
+            <objects>
+                <viewController id="wgi-bH-hv5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vRb-V9-W16"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qxj-m0-5Lu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4I5-MZ-HRX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLF-kY-m9S">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="About Reality Checks" id="pYG-6W-OWE">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="iV3-m5-sgg">
+                                            <connections>
+                                                <segue destination="K7k-Ge-5nU" kind="show" id="rDu-Sk-OTx"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YwD-6T-fWt">
+                                <rect key="frame" x="20" y="65" width="292" height="348"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="HLv-xq-rFy"/>
+                                    <constraint firstAttribute="height" constant="348" id="RKo-VJ-4jN"/>
+                                </constraints>
+                                <string key="text">Reality checking is a technique used to become lucid during dreaming. A reality check is something that allows you to test if you are dreaming or not. Ask yourself "Is this real?" and "Am I dreaming?" as you perform your reality check.  Here is a list of sample reality checks: Breathe - Can you hold your nose and mouth shut and breathe?
+Jump - When you jump, do you float back down?
+Read - Can you read a sentence twice without it changing?
+Look - Is your vision clearer or blurrier than normal?
+Hand - Can you push hand through a solid surface?
+Time - Can you read a clock face or digital watch?
+Fly - Can you will yourself to fly or hover above the ground?
+Palms - Do the palms of your hands look normal close-up?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OLF-kY-m9S" firstAttribute="leading" secondItem="4I5-MZ-HRX" secondAttribute="leadingMargin" constant="-20" id="5mW-t7-DLs"/>
+                            <constraint firstItem="OLF-kY-m9S" firstAttribute="centerX" secondItem="4I5-MZ-HRX" secondAttribute="centerX" id="8XQ-Eg-cYx"/>
+                            <constraint firstItem="YwD-6T-fWt" firstAttribute="top" secondItem="OLF-kY-m9S" secondAttribute="bottom" constant="21" id="HRd-Sz-GeN"/>
+                            <constraint firstItem="YwD-6T-fWt" firstAttribute="leading" secondItem="4I5-MZ-HRX" secondAttribute="leadingMargin" id="dDd-iB-cRz"/>
+                            <constraint firstItem="OLF-kY-m9S" firstAttribute="top" secondItem="4I5-MZ-HRX" secondAttribute="topMargin" id="wOC-Xt-xdx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEK-An-0JW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-215" y="990"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="uzt-xR-ZN9">
@@ -49,12 +122,21 @@
                                                 <segue destination="Tz3-iO-F2e" kind="show" id="gB5-NP-XRY"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Learn More" id="nkb-kf-xN9">
+                                            <connections>
+                                                <segue destination="wgi-bH-hv5" kind="show" id="C1l-7L-evY"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Xkf-sm-fVh">
-                                <rect key="frame" x="0.0" y="44" width="600" height="117"/>
+                                <rect key="frame" x="0.0" y="142" width="600" height="100"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="FJm-qb-qBI"/>
+                                    <constraint firstAttribute="height" constant="100" id="msA-dv-Jyj"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="470239849.02546501">
                                     <!--2015-11-26 14:10:49 +0000-->
                                 </date>
@@ -62,25 +144,41 @@
                                     <action selector="datePicker:" destination="K7k-Ge-5nU" eventType="valueChanged" id="wzA-Pk-9r8"/>
                                 </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmd-ur-2fo">
-                                <rect key="frame" x="254" y="178" width="93" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Set a time that's right for you to get a reality check reminder" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrT-X9-fM6">
+                                <rect key="frame" x="63" y="72" width="459" height="47"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmd-ur-2fo">
+                                <rect key="frame" x="246" y="344" width="93" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Set Reminder"/>
                                 <connections>
                                     <action selector="setReminder:" destination="K7k-Ge-5nU" eventType="touchUpInside" id="SFc-9E-UTd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How often would you like a reminder?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWc-LK-Nzz">
+                                <rect key="frame" x="152" y="279" width="296" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Xkf-sm-fVh" firstAttribute="top" secondItem="WBM-WK-fhE" secondAttribute="bottom" id="3Ge-8g-VNW"/>
-                            <constraint firstItem="kmd-ur-2fo" firstAttribute="centerX" secondItem="hGL-n7-KMP" secondAttribute="centerX" id="CfO-K4-UAf"/>
-                            <constraint firstItem="WBM-WK-fhE" firstAttribute="centerX" secondItem="hGL-n7-KMP" secondAttribute="centerX" id="Jei-YD-BMn"/>
-                            <constraint firstItem="Xkf-sm-fVh" firstAttribute="centerX" secondItem="hGL-n7-KMP" secondAttribute="centerX" id="UzG-du-DtQ"/>
-                            <constraint firstItem="WBM-WK-fhE" firstAttribute="leading" secondItem="hGL-n7-KMP" secondAttribute="leadingMargin" constant="-20" id="W0I-KF-tak"/>
-                            <constraint firstItem="kmd-ur-2fo" firstAttribute="top" secondItem="Xkf-sm-fVh" secondAttribute="bottom" constant="17" id="abp-xL-wl3"/>
-                            <constraint firstItem="WBM-WK-fhE" firstAttribute="top" secondItem="hGL-n7-KMP" secondAttribute="topMargin" id="xV4-Zf-RUD"/>
+                            <constraint firstItem="Xkf-sm-fVh" firstAttribute="leading" secondItem="hGL-n7-KMP" secondAttribute="leadingMargin" constant="-20" id="291-St-F4o"/>
+                            <constraint firstItem="WBM-WK-fhE" firstAttribute="leading" secondItem="hGL-n7-KMP" secondAttribute="leadingMargin" constant="-20" id="GTe-6N-20X"/>
+                            <constraint firstItem="Xkf-sm-fVh" firstAttribute="top" secondItem="ZrT-X9-fM6" secondAttribute="bottom" constant="23" id="I9e-yJ-OSn"/>
+                            <constraint firstItem="Xkf-sm-fVh" firstAttribute="centerX" secondItem="hGL-n7-KMP" secondAttribute="centerX" id="VBa-oi-BkP"/>
+                            <constraint firstItem="ZrT-X9-fM6" firstAttribute="leading" secondItem="hGL-n7-KMP" secondAttribute="leadingMargin" constant="43" id="Yfk-Ou-erI"/>
+                            <constraint firstItem="ZrT-X9-fM6" firstAttribute="top" secondItem="WBM-WK-fhE" secondAttribute="bottom" constant="28" id="bIl-mU-qoj"/>
+                            <constraint firstItem="WBM-WK-fhE" firstAttribute="centerX" secondItem="hGL-n7-KMP" secondAttribute="centerX" id="p4p-wI-3ir"/>
+                            <constraint firstItem="ZrT-X9-fM6" firstAttribute="centerX" secondItem="hGL-n7-KMP" secondAttribute="centerX" id="yjI-Zo-1AP"/>
+                            <constraint firstItem="WBM-WK-fhE" firstAttribute="top" secondItem="hGL-n7-KMP" secondAttribute="topMargin" id="zqj-hD-Xgg"/>
                         </constraints>
                     </view>
                     <connections>
@@ -89,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wqn-Ff-FfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="410" y="990"/>
+            <point key="canvasLocation" x="454" y="990"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="mvT-gi-zuI">
@@ -110,7 +208,6 @@
                                     <navigationItem title="Home" id="n9F-76-Ccr">
                                         <barButtonItem key="leftBarButtonItem" title="Sign Out" id="DYx-sl-yTj">
                                             <connections>
-                                                <action selector="signOut:" destination="Tz3-iO-F2e" id="EZu-Ds-CKO"/>
                                                 <segue destination="BYZ-38-t0r" kind="show" identifier="logOut" id="42h-5S-dFl"/>
                                             </connections>
                                         </barButtonItem>
@@ -579,17 +676,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="paL-7B-mdk">
-                                <rect key="frame" x="15" y="125" width="293" height="347"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="293" id="9Vs-rm-Cfj"/>
-                                    <constraint firstAttribute="height" constant="347" id="aoq-uI-1il"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4Q-f6-qcE">
                                 <rect key="frame" x="31" y="79" width="43" height="21"/>
                                 <animations/>
@@ -608,6 +694,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="paL-7B-mdk">
+                                <rect key="frame" x="15" y="126" width="293" height="347"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="293" id="9Vs-rm-Cfj"/>
+                                    <constraint firstAttribute="height" constant="347" id="aoq-uI-1il"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -634,9 +731,13 @@
             <point key="canvasLocation" x="2510" y="-457"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="loginbackground" width="5760" height="3840"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gB5-NP-XRY"/>
-        <segue reference="gOb-ee-ref"/>
+        <segue reference="t6S-2G-xcd"/>
         <segue reference="MW8-RT-nwd"/>
+        <segue reference="gOb-ee-ref"/>
+        <segue reference="scO-Vm-Ag3"/>
     </inferredMetricsTieBreakers>
 </document>

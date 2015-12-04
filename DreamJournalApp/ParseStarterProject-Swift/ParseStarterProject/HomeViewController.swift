@@ -26,7 +26,8 @@ class HomeViewController: UIViewController {
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if(identifier == "logOut") {
             PFUser.logOutInBackground()
-            if(PFUser.currentUser()!.username == nil) {
+            print(PFUser.currentUser()?.username)
+            if(PFUser.currentUser()?.username == nil) {
                 return true
             }
             else {

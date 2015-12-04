@@ -18,10 +18,12 @@
 		81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */; };
 		81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */; };
 		F9023CA91BFFCA2700171FEC /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9023CA81BFFCA2700171FEC /* ParseUI.framework */; };
-		F9023CAD1BFFE02700171FEC /* dreamdaily.png in Resources */ = {isa = PBXBuildFile; fileRef = F9023CAC1BFFE02700171FEC /* dreamdaily.png */; };
 		F9023CAF1C00E64200171FEC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9023CAE1C00E64200171FEC /* HomeViewController.swift */; };
 		F9023CB11C00FB8D00171FEC /* AddDreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9023CB01C00FB8D00171FEC /* AddDreamViewController.swift */; };
 		F9023CB31C0150FA00171FEC /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9023CB21C0150FA00171FEC /* DictionaryViewController.swift */; };
+		F94983AE1C0F42D0003F3C7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94983AD1C0F42D0003F3C7C /* ViewController.swift */; };
+		F94983B31C111939003F3C7C /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F94983B21C111939003F3C7C /* Pacifico.ttf */; };
+		F94983B51C111FA2003F3C7C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94983B41C111FA2003F3C7C /* SignUpViewController.swift */; };
 		F9BA0AC31C0388C400F1751A /* DreamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA0AC21C0388C400F1751A /* DreamsTableViewController.swift */; };
 		F9BA0AC51C039BE000F1751A /* DetailedEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA0AC41C039BE000F1751A /* DetailedEntryViewController.swift */; };
 		F9C470121C074BE5001D9CF1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C470111C074BE5001D9CF1 /* SettingsViewController.swift */; };
@@ -46,10 +48,12 @@
 		81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		81BA81801A49E10C00E65899 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		F9023CA81BFFCA2700171FEC /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
-		F9023CAC1BFFE02700171FEC /* dreamdaily.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dreamdaily.png; path = ../dreamdaily.png; sourceTree = "<group>"; };
 		F9023CAE1C00E64200171FEC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F9023CB01C00FB8D00171FEC /* AddDreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDreamViewController.swift; sourceTree = "<group>"; };
 		F9023CB21C0150FA00171FEC /* DictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		F94983AD1C0F42D0003F3C7C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F94983B21C111939003F3C7C /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
+		F94983B41C111FA2003F3C7C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F9BA0AC21C0388C400F1751A /* DreamsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamsTableViewController.swift; sourceTree = "<group>"; };
 		F9BA0AC41C039BE000F1751A /* DetailedEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedEntryViewController.swift; sourceTree = "<group>"; };
 		F9C470111C074BE5001D9CF1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -105,10 +109,13 @@
 		81BA81471A49DA1800E65899 /* ParseStarterProject */ = {
 			isa = PBXGroup;
 			children = (
+				F94983B21C111939003F3C7C /* Pacifico.ttf */,
 				F9023CA81BFFCA2700171FEC /* ParseUI.framework */,
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				81BA814C1A49DA1800E65899 /* LoginViewController.swift */,
+				F94983B41C111FA2003F3C7C /* SignUpViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
+				F94983AD1C0F42D0003F3C7C /* ViewController.swift */,
 				F9C470111C074BE5001D9CF1 /* SettingsViewController.swift */,
 				F9BA0AC41C039BE000F1751A /* DetailedEntryViewController.swift */,
 				F9BA0AC21C0388C400F1751A /* DreamsTableViewController.swift */,
@@ -117,7 +124,6 @@
 				F9023CB21C0150FA00171FEC /* DictionaryViewController.swift */,
 				F9023CB01C00FB8D00171FEC /* AddDreamViewController.swift */,
 				F9023CAE1C00E64200171FEC /* HomeViewController.swift */,
-				F9023CAC1BFFE02700171FEC /* dreamdaily.png */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -206,8 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				814C3ACA1B69877600E307BB /* Main.storyboard in Resources */,
-				F9023CAD1BFFE02700171FEC /* dreamdaily.png in Resources */,
 				814C3ACB1B69877600E307BB /* Images.xcassets in Resources */,
+				F94983B31C111939003F3C7C /* Pacifico.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +245,9 @@
 				F9F2E36D1C015D740072F8AC /* DefinitionViewController.swift in Sources */,
 				F9BA0AC51C039BE000F1751A /* DetailedEntryViewController.swift in Sources */,
 				F9C470121C074BE5001D9CF1 /* SettingsViewController.swift in Sources */,
+				F94983AE1C0F42D0003F3C7C /* ViewController.swift in Sources */,
 				F9023CB11C00FB8D00171FEC /* AddDreamViewController.swift in Sources */,
+				F94983B51C111FA2003F3C7C /* SignUpViewController.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* LoginViewController.swift in Sources */,
 				F9F2E36F1C01730B0072F8AC /* WebViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,

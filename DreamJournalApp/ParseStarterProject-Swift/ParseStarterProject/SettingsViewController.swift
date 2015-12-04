@@ -33,12 +33,18 @@ class SettingsViewController: UIViewController {
         print(dateTime)
         let localNotification = UILocalNotification()
         localNotification.fireDate = dateTime
-        localNotification.alertBody = "Lucid reminder"
+        localNotification.repeatInterval = NSCalendarUnit.Day
+        if #available(iOS 8.2, *) {
+            localNotification.alertTitle = "Reminder"
+        } else {
+            // Fallback on earlier versions
+        }
+        localNotification.alertBody = "Reality Check Time!"
         localNotification.soundName = UILocalNotificationDefaultSoundName
         localNotification.applicationIconBadgeNumber = 1
         let application = UIApplication.sharedApplication()
         application.scheduleLocalNotification(localNotification)
-        print("Reminder set")
+        
     }
     
     /*
